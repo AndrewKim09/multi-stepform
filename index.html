@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <link rel="stylesheet" href="./styles.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar start -->
+  <div class="main">
+    <div class="sidebar">
+
+      <div class="sidebarGrid">
+
+        <div class="sidebarItem">
+
+          <button class="sidebarButton current" id="sidebarButton1">
+            1
+          </button>
+        
+          <p>
+            <span>STEP 1</span>
+            <br/>
+            YOUR INFO
+          </p>
+        </div>
+
+        <div class="sidebarItem">
+          <button class="sidebarButton" id="sidebarButton2">
+            2
+          </button>
+          <p>
+            <span>STEP 2</span>
+            <br/>
+            SELECT PLAN
+          </p>
+        </div>
+
+        <div class="sidebarItem">
+          <button class="sidebarButton" id="sidebarButton3">
+            3
+          </button>
+          <p>
+            <span>STEP 3</span>
+            <br/>
+            ADD-ONS
+          </p>
+        </div>
+
+          <div class="sidebarItem">
+            <button class="sidebarButton" id="sidebarButton4">
+              4
+            </button>
+            <p>
+              <span>STEP 4</span>
+              <br/>
+              SUMMARY
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stepBox">
+
+      <div class="titleBox">
+        <h1 class = "title" id="title">Personal info</h1>
+        <p class = "subtext" id="subtext">Please provide your name, email address, and phone number.</p>
+      </div>
+
+      <div class="inputArea">
+
+        <div class="personalInfoInput" id="step1">
+          <div class="nameBox">
+            <div class="infoTextBox">
+              <label for="name">Name</label>
+              <p class="error text hidden">This field is required</p>
+            </div>
+            <input type="text" id="name" name="name" placeholder="e.g. Stephen King" required>
+          </div>
+
+          <div class="emailBox">
+            <div class="infoTextBox">
+              <label for="email">Email Address</label>
+              <p class="error text hidden">This field is required</p>
+            </div>
+            <input type="text" id="email" name="email" placeholder="e.g. stephenking@lorem.com" required>
+          </div>
+
+          <div class="phoneBox">
+            <div class="infoTextBox">
+              <label for="phone">Phone Number</label>
+              <p class="error text hidden">This field is required</p>
+            </div>
+            <input type="text" id="phone" name="phone" placeholder="e.g. +1 234 567 890" required>
+          </div>
+        </div>
+
+        <div class="planBox" id="step2">
+          <div class="planGrid">
+            <div data-value="1" class="plan active" id="plan1">
+              <image src="./assets/images/icon-arcade.svg" alt="Arcade Icon">
+
+                <div class="planTextBox">
+                  <span>Arcade</span>
+                  <p class="price">$9/mo</p>
+                  <p class="discount hidden">2 months free</p>
+                </div>
+            </div>
+
+            <div data-value="" class="plan" id="plan2">
+              <image src="./assets/images/icon-advanced.svg" alt="Arcade Icon">
+              
+                <div class="planTextBox">
+                  <span>Advanced</span>
+                  <p class="price">$12/mo</p>
+                  <p class="discount hidden">2 months free</p>
+                </div>
+            </div>
+
+            <div data-value="3" class="plan" id="plan3">
+              <image src="./assets/images/icon-pro.svg" alt="Arcade Icon">
+              
+                <div class="planTextBox">
+                  <span>Pro</span>
+                  <p class="price">$15/mo</p>
+                  <p class="discount hidden">2 months free</p>
+                </div>
+            </div>
+          </div>
+
+          <div class="timeConfigureBox">
+
+            <p class="time current" id="monthText">Monthly</p>
+
+            <button class="switchButton" id="switchButton">
+              <div class="switchBall" id="switchBall"></div>
+            </button>
+            <p class="time" id="yearText">Yearly</p>
+            
+          </div>
+        </div>
+
+        <div class="addOnBox" id="step3">
+          <div class="addOnGrid">
+
+            <div data-value="1" class="addOnItem">
+              <input type="checkbox" id="addOn1" name="addOn1" value="addOn1">
+
+              <div class="addOnText">
+                <span>Online service</span>
+                <p>Access to multiplayer games</p>
+              </div>
+
+              <p class="addOnPrices"></p>
+
+
+            </div>
+
+            <div data-value="2" class="addOnItem">
+              <input type="checkbox" id="addOn1" name="addOn1" value="addOn1">
+
+              <div class="addOnText">
+                <span>Larger storage</span>
+                <p>Extra 1TB of cloud save</p>
+              </div>
+
+              <p class="addOnPrices"></p>
+
+
+            </div>
+
+            <div data-value="3"class="addOnItem">
+              <input type="checkbox" id="addOn1" name="addOn1" value="addOn1">
+
+              <div class="addOnText">
+                <span>Online service</span>
+                <p>Customizable profile</p>
+              </div>
+
+              <p class="addOnPrices"></p>
+
+
+            </div>
+          </div>
+        </div>
+
+        <div class="finishBox" id="step4">
+          <div class="selectionsBox">
+            <div>
+              <div class="planChoice">
+                
+              </div>
+            </div>
+
+            <div class="addOnChoices">
+
+            </div>
+          </div>
+
+          <div class="totalBox">
+            <p class="totalText"></p>
+            <p class="totalPrice"></p>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="navigationBar">
+
+        <button class="nextStepButton" id="next">Next Step</button>
+        <button class="backButton hidden", id="back">Go Back</button>
+
+      </div>
+        
+    </div>
+
+</div>
+
+<div class="attribution">
+  Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+  Coded by <a href="#">Andrew Kim</a>.
+</div>
+  
+</body>
+
+<script src="./script.js"></script>
+</html>
